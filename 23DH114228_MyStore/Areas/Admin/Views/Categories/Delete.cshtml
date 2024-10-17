@@ -6,30 +6,30 @@
 }
 
 <h2 class="bg-success">Xóa Danh Mục</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <h4>Bạn chắc không?</h4>
+            <div class="form-group">
+            </div>
 
-<h3 class="bg-danger">Bạn chắc không</h3>
-<div>
-    <h4>Category</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @*@Html.DisplayNameFor(model => model.CategoryName)*@
-            Tên danh mục
-        </dt>
-        @*Hiển thị giá trị CategoryName*@
-        <dd>
-            @Html.DisplayFor(model => model.CategoryName)
-        </dd>
-
-    </dl>
-    <hr />
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Xóa " class="btn btn-primary" /> |
-            @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary btn-sm" })
+            <div class=" control-label col-md-2">Tên Danh Mục </div>
+            <div class="col-md-10">
+                @*Hiển thị giá trị CategoryName*@
+                @Html.DisplayFor(model => model.CategoryName)
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Xóa " class="btn btn-primary" /> |
+                    @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary" })
+                </div>
+            </div>
         </div>
-    }
-</div>
+    </div>
+}
+
+
