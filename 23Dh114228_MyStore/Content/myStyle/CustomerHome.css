@@ -1,10 +1,14 @@
-﻿.banner {
-    background-image: url('../banner1.jpg');
+﻿/* Phần Banner */
+.banner {
     background-size: cover;
+    background-image: url('../pictures/anotherday-banner2.png');
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 300px;
+    min-height: 700px;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
 }
 
 .banner-container {
@@ -23,12 +27,13 @@
 .btnBanner {
     display: inline-block;
     padding: 5px 20px;
-    background-color: darkorange;
+    background-color: darkblue;
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-/*Style cho phần Search*/
+
+/* Style cho phần Search */
 .search-container {
     display: flex;
     justify-content: center;
@@ -61,7 +66,7 @@
 #searchProd h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #ff6600; /* Thay đổi màu sắc ở đây, ví dụ: #ff6600 */
+    color: #ff6600;
     text-align: center;
 }
 
@@ -72,14 +77,14 @@
 
 .feature-container {
     display: flex;
-    overflow-x: auto; /* Cho phép cuộn ngang nếu danh sách sản phẩm quá dài */
+    overflow-x: auto;
     gap: 10px;
     padding: 10px;
     justify-content: center;
 }
 
 .fproduct-item {
-    width: 150px; /* Giảm chiều rộng của từng sản phẩm để có thể hiển thị nhiều sản phẩm trên một hàng */
+    width: 150px;
     margin: 5px;
     flex: 0 0 auto;
     border: 1px solid #ddd;
@@ -90,15 +95,15 @@
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Căn giữa nội dung theo chiều ngang */
+    align-items: center;
     justify-content: space-between;
 }
 
     .fproduct-item img {
         width: 100%;
         height: auto;
-        max-height: 100px; /* Giảm chiều cao tối đa của hình ảnh để hình ảnh nhỏ hơn */
-        object-fit: contain; /* Đảm bảo hình ảnh giữ nguyên tỷ lệ */
+        max-height: 100px;
+        object-fit: contain;
         margin-bottom: 10px;
     }
 
@@ -123,8 +128,7 @@
     color: #777;
 }
 
-
-/*Style của list products*/
+/* Style của list products */
 .listProduct {
     text-align: left;
 }
@@ -158,7 +162,8 @@
     .detailproduct-item img {
         max-height: 100px;
     }
-/*Thuộc tính chung của feature và new product*/
+
+/* Thuộc tính chung của feature và new product */
 .fproduct-item, .lproduct-item, .detailproduct-item {
     border: 1px groove #808080;
     border-radius: 10px;
